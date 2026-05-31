@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>ChatTimestamps</AssemblyName>
+    <Version>1.0.0</Version>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Don't copy referenced DLLs to output - the game provides them -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Reference all game DLLs from libs/, mark them as private (don't copy to output) -->
+    <Reference Include="libs\*.dll"
+               Exclude="libs\System*.dll;libs\mscorlib.dll;libs\netstandard.dll;libs\Microsoft*.dll;libs\Mono*.dll;libs\Newtonsoft*.dll">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
