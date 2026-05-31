@@ -18,7 +18,7 @@ namespace ChatTimestamps
         {
             try
             {
-                _harmony = new Harmony("com.puckmods.chattimestamps");
+                _harmony = new Harmony("chattimestamps");
                 _harmony.PatchAll();
                 Debug.Log("[ChatTimestamps] v1.0.0 loaded successfully!");
                 return true;
